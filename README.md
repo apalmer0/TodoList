@@ -12,6 +12,16 @@ This is a to do list app with basic functionality built in.
 -   run the rails server (`rails server`)
 -   run the rails console (`rails console`) - this will let you work with the database more or less directly, rather than having to go through the app.
 
+## Basic git workflow
+
+-   The default branch is `develop`. There's also a `master` branch. It doesn't really matter with an app this small, but on a business app `master` would be what the entire world uses, and `develop` would be like a step before that, where everything _should_ work properly but maybe just the people in your company will see it so if something's broken it's not the end of the world.
+-   Create and switch to ('checkout') a new branch - you should always do work on a different branch. `git checkout -b new-branch-name-goes-here`
+-   Do your work, make whatever changes you need.
+-   Check out what files git has noticed you've changed: `git status`
+-   Add all of those files to what you want to save ('commit') - `git add .` (`.` just refers to the current directory, which is everything. `..` refers to the immediate parent directory)
+-   Create a 'commit', which is like a checkpoint for your work, and add a message indicating what you did up to that checkpoint (`git commit -m "did some work"`). The `-m` flag means 'with the following message:'.
+-   Push your branch to github `git push origin new-branch-name-goes-here`. `origin` is the name of the 'remote', which is your repo on github.com, as opposed to your local repo, which is just the directory you've got saved on your computer. `git push` pushes the branch named `new-branch-name-goes-here` to the remote named `origin` 
+-   Create a pull request on github.com: a 'pull request' is a request to get your changes added into the default branch. Usually right after you push your branch you'll see an option appear that asks you if you want to create a pull request with your branch, but if not you can click on the 'branches' link within the code tab, find your branch, and click the 'new pull request' button there.
 
 ## Tasks
 
