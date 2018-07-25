@@ -7,7 +7,7 @@ This is a to do list app with basic functionality built in.
 -   Clone the repository. This just makes a local copy of the repo on your computer. Click on the green 'clone or download' button in the top right corner of the page. Copy the value in the field (`git@github.com:apalmer0/TodoList.git`). Within whatever directory you want your app to live, run `git clone git@github.com:apalmer0/TodoList.git`. This will basically 'paste' the app into that directory and initialize git tracking, so you'll be able to track your changes.
 -   install gems (`bundle install`)
 -   create database (`rake db:create`)
--   run migrations (`rake db:migrate`)
+-   run migrations (`rake db:migrate`). Migrations are basically just instructions for how to create/update tables in a database. When you start an application you'll have a database that's set aside for you (that's what `rake db:create` does), but it's completely empty. Our 'migrations' are instructions like 'create a users table' or 'add a column titled `first_name` to the users table' that take our empty database and update it to make it useful.
 -   populate database with 'seeds' - these are just resources I've hardcoded into the app so you've got something to work with (`rake db:seed`)
 -   run the rails server (`rails server`)
 -   In a separate tab in your terminal, run the rails console (`rails console`) - this will let you work with the database more or less directly, rather than having to go through the app.
